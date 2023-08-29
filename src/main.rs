@@ -1,7 +1,7 @@
 mod bomb;
 mod textures;
 
-use bomb::*;
+use bomb::plugin::BombPlugin;
 use textures::*;
 use bevy::prelude::*;
 
