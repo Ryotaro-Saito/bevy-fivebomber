@@ -1,6 +1,6 @@
 use bevy::prelude::*;
-use crate::bomb::component::Bomb;
-use crate::textures::Textures;
+use crate::presentation::bomb::component::Bomb;
+use crate::presentation::textures::Textures;
 
 // bombに関する処理のPlugin
 pub struct BombPlugin;
