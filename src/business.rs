@@ -1,5 +1,7 @@
 pub mod game;
 mod question;
+mod answer;
+mod answer_log;
 mod question_repository;
 
 use bevy::prelude::*;
