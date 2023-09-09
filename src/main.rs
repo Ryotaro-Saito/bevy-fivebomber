@@ -1,19 +1,13 @@
-mod bomb;
-mod textures;
+mod presentation;
+mod business;
+mod view_model_event;
 
-use bomb::plugin::BombPlugin;
-use textures::*;
 use bevy::prelude::*;
+use presentation::PresentationPlugin;
+use business::BusinessPlugin;
 
 fn main() {
     App::new()
-    .add_systems(PreStartup, setup_window)
-    .add_systems(PreStartup, setup_images)
-    .add_plugins((DefaultPlugins, BombPlugin))
-    .run();
-}
-
-// windowの初期設定
-fn setup_window(mut commands: Commands) {
-    commands.spawn(Camera2dBundle::default());
+        .add_plugins((DefaultPlugins, PresentationPlugin, BusinessPlugin))
+        .run();
 }
