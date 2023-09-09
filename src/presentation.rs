@@ -1,5 +1,7 @@
-pub mod bomb;
+mod bomb;
 mod textures;
+mod window;
+mod position;
 
 use bevy::prelude::*;
 
@@ -9,7 +11,7 @@ pub struct PresentationPlugin;
 impl Plugin for PresentationPlugin {
     fn build(&self, app: &mut App) {
         app
-            .add_plugins(bomb::plugin::BombPlugin)
+            .add_plugins((bomb::plugin::BombPlugin, window::WindowPlugin))
             .add_systems(PreStartup, setup_window)
             .add_systems(PreStartup, setup_images);
     }
